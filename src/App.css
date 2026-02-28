@@ -1,0 +1,217 @@
+/* Configuración General y Centrado */
+body {
+  margin: 0;
+  background-color: #1a1a2e; /* Fondo oscuro elegante */
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px; /* Evita que se vea muy ancho en monitores grandes */
+  margin: 40px auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center; /* Centra los títulos */
+}
+
+/* Navegación Estilizada y Moderna */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: rgba(22, 33, 62, 0.8); /* Fondo con ligera transparencia */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+  padding: 10px 20px;
+  border-radius: 50px; /* Bordes redondeados tipo píldora */
+  margin: 20px auto 40px auto;
+  width: fit-content; /* Se ajusta al contenido */
+  border: 1px solid rgba(0, 210, 255, 0.2); /* Borde sutil brillante */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: sticky; /* Se mantiene visible al hacer scroll */
+  top: 20px;
+  z-index: 1000;
+}
+.btn-link-style:hover {
+  color: #007bff;
+}
+.nav-link {
+  color: #94a3b8; /* Gris azulado suave por defecto */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Estado Hover */
+.nav-link:hover {
+  color: #00d2ff;
+  background: rgba(0, 210, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Estado Activo (La página donde estás) */
+.nav-link.active {
+  background: #00d2ff;
+  color: #1a1a2e; /* Contraste oscuro sobre el azul brillante */
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+}
+
+/* Tarjetas (Cards) */
+.card {
+  background: #ffffff;
+  color: #333;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: left; /* El contenido interno va alineado a la izquierda */
+}
+
+h1,
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #1a1a2e; /* Título dentro de card en oscuro */
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Formularios Tabulados */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs con Texto Negro Visible */
+input,
+select {
+  color: #000000 !important;
+  background-color: #f8f9fa !important;
+  padding: 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Botón Centrado */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Tabla Estilizada */
+/* Contenedor de la tabla para bordes redondeados y scroll */
+.table-wrapper {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden; /* Corta las esquinas para que se vean redondeadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e4e8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #333333;
+  font-size: 15px;
+}
+
+/* Cabecera estilizada */
+thead th {
+  cursor: default;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px;
+  border-bottom: 2px solid #dee2e6;
+  text-align: left;
+}
+
+/* Celdas de datos */
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.2s ease;
+}
+
+/* Efecto Cebra: Filas alternas */
+tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Efecto Hover: Resalta la fila donde está el mouse */
+tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* Estilo para la columna de Monto */
+.monto-cell {
+  font-family:
+    "Courier New", Courier, monospace; /* Fuente mono para alinear números */
+  font-weight: 700;
+  color: #28a745; /* Verde éxito */
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Badge para el ID */
+td:first-child {
+  color: #6c757d;
+  font-weight: bold;
+}
+
+/* Mensaje cuando no hay datos */
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #adb5bd;
+  font-style: italic;
+}
